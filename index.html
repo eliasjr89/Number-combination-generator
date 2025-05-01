@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Number Generator</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+      <div class="container-fluid w-100 flex-column flex-md-row justify-content-around align-items-center">
+        <a href="index.html" class="navbar-brand d-flex justify-content-center w-md-25 mb-3 mb-md-0">
+          <img class="logo img-fluid" src="./images/ejr.png" alt="logo personal">
+        </a>
+
+        <div class="navbar-buttons d-flex gap-3 flex-wrap justify-content-evenly w-100 w-md-50 mb-3 mb-md-0">
+          <button id="copy-button" class="btn btn-primary" data-tooltip="Copiar combinación" data-i18n="copy">Copiar</button>
+          <button id="generate-btn" class="btn btn-success" data-tooltip="Generar números" data-i18n="generate">Generar</button>
+          <button id="clear-history" class="btn btn-danger" data-tooltip="Limpiar historial" data-i18n="clear">Limpiar</button>
+          <button id="toggle-lang" class="btn btn-outline-light w-50 w-md-auto mb-3 mb-md-0" data-i18n="langToggle">🌐 Cambiar idioma</button>
+        </div>
+
+        <button id="toggle-dark" class="btn btn-outline-light w-50 w-md-auto mb-3 mb-md-0" data-i18n="toggleDark">🌙 Modo oscuro</button>
+      </div>
+    </nav>
+
+    <div class="container mt-5 px-3 px-md-5">
+      <div id="random-combination" class="number-container mb-4">
+        <div class="number"></div>
+        <div class="number"></div>
+        <div class="number"></div>
+        <div class="number"></div>
+        <div class="number"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+      </div>
+
+      <div class="d-flex justify-content-center">
+        <h3 class="section-title text-center my-4" data-i18n="history">Historial de combinaciones</h3>
+      </div>
+      
+      <div id="generated-list" class="d-flex flex-column gap-4" role="list" aria-label="Historial de combinaciones generadas"></div>
+
+      <div id="toast" class="toast-message" data-i18n="toastCopied"></div>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
